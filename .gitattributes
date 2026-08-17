@@ -1,0 +1,4 @@
+*.py text eol=lf
+
+# Normalize line endings for files that must stay portable.
+*.py diff=python
