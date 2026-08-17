@@ -30,11 +30,33 @@ The algorithm performs a connected-component analysis using a **BFS flood-fill**
 
 ## How to run
 
-It is entirely self-contained — a single HTML file with zero build step or dependencies. Just open it in any browser:
+### Interactive visualization
+
+The HTML demo is entirely self-contained — a single file with zero build step or dependencies. Just open it in any browser:
 
 ```
 proximity_noise_filter_demo.html
 ```
+
+### Generic Python implementation
+
+`proximity_area_filter.py` holds the reusable, dependency-light version of the same filter. It only needs `numpy`:
+
+```
+pip install numpy
+python proximity_area_filter.py      # runs a self-test on a synthetic image
+```
+
+Or import it and use it on your own binary images:
+
+```python
+import numpy as np
+from proximity_area_filter import proximity_area_filter
+
+cleaned = proximity_area_filter(image, min_area_threshold=30, proximity_threshold=3)
+```
+
+The function signature matches the parameters in the HTML demo: `proximity_area_filter(image, min_area_threshold, proximity_threshold)`.
 
 ## Output / "Scope" readouts
 
