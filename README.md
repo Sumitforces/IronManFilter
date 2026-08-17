@@ -34,7 +34,7 @@ The repo ships the algorithm twice:
 | --- | --- |
 | `proximity_area_filter.py` | The generic, reusable engine (dependency: `numpy`). Pip-installable, fully tested. |
 | `proximity_noise_filter_demo.html` | Interactive canvas demo: runs the *same* algorithm live, step by step, so you can watch components grow, merge, and get accepted or rejected. |
-| `proximity_noise_filter_final_version.html` | Final polished recording-ready variant of the demo (narrative captions + live instrumented run) used as the on-screen deliverable for the walkthrough video. |
+| `proximity_noise_filter_demo_final_version.html` | Final polished recording-ready variant of the demo (narrative captions + live instrumented run) used as the on-screen deliverable for the walkthrough video. |
 
 ## Installation
 
@@ -89,8 +89,8 @@ Two browser-deliverable HTML files are included. Open either in any browser —
 they are single, dependency-free files:
 
 - `proximity_noise_filter_demo.html` — the working interactive sandbox.
-- `proximity_noise_filter_final_version.html` — the **recording-ready** variant
-  used for the live walkthrough. It opens on a narrative caption, then animates
+- `proximity_noise_filter_demo_final_version.html` — the **recording-ready**
+  variant used for the live walkthrough. It opens on a narrative caption, then animates
   the instrumented BFS sweep in real time for screen capture.
 
 Both generate a synthetic `62 × 38` image from solid blobs, gap clusters, and
@@ -110,7 +110,7 @@ reports signal pixels, components found, and kept/removed totals.
 
 The final version is designed to be screen-captured end to end:
 
-1. Open `proximity_noise_filter_final_version.html` full-screen.
+1. Open `proximity_noise_filter_demo_final_version.html` full-screen.
 2. Hit **Run** and let the instrumented sweep play through (use **Step**/*speed*
    controls to pace it for the narration).
 3. Capture with OBS, a browser recorder, or Windows **Win+G**.
@@ -134,7 +134,7 @@ GitHub Actions runs the tests on Python 3.9–3.12 for every push and pull reque
 .
 ├── proximity_area_filter.py          # the generic algorithm (+ importable engine)
 ├── proximity_noise_filter_demo.html  # interactive visualization
-├── proximity_noise_filter_final_version.html  # recording-ready demo deliverable
+├── proximity_noise_filter_demo_final_version.html  # recording-ready demo deliverable
 ├── videos/                           # recorded live-demo deliverables (.mp4 placeholder)
 ├── tests/                            # pytest suite
 ├── pyproject.toml                    # packaging & tooling config

@@ -3,7 +3,7 @@
 Screen captures of the live algorithm sweep go here.
 
 Drop the recording you make from
-`proximity_noise_filter_final_version.html` into this folder, e.g.:
+`proximity_noise_filter_demo_final_version.html` into this folder, e.g.:
 
 ```
 videos/ironman-proximity-area-filter-demo.mp4
